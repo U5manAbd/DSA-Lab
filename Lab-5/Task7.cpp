@@ -1,4 +1,5 @@
 #include <iostream>
+using namespace std;
 
 const int N = 5;
 
@@ -49,15 +50,14 @@ int main() {
     };
 
     if (solveMaze(maze, 0, 0, solution)) {
-        std::cout << "Solution Path Found:" << std::endl;
+        cout << "Solution Path Found:" << endl;
         for (int i = 0; i < N; i++) {
             for (int j = 0; j < N; j++) {
-                std::cout << solution[i][j] << " ";
+                cout << solution[i][j] << " ";
             }
-            std::cout << std::endl;
+            cout << endl;
         }
     } else {
-        std::cout << "No solution exists." << std::endl;
+        cout << "No solution exists." << endl;
     }
-    return 0;
 }
