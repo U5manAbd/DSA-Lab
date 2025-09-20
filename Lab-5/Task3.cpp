@@ -23,23 +23,15 @@ public:
         temp->next = newNode;
     }
 
-   void print_reverse(Node *temp){
-    if(!temp){
-        return;
-    }
-    print_reverse(temp->next);
-    cout<<temp->data<<" ";
-   }
-
    Node *return_head(){
     return head;
    }
 
-   int find_length(Node *head,int sum){
+   int find_length(Node *head){
     if(head->next==nullptr){
         return 0;
     }
-    return 1+ find_length(head->next,sum);
+    return 1+ find_length(head->next);
    }
 };
 
@@ -50,6 +42,6 @@ int main (){
     l1.insertAtEnd(30);
     l1.insertAtEnd(5);
     Node *head=l1.return_head();
-    int total=l1.find_length(head,0);
+    int total=l1.find_length(head);
     cout<<total<<endl;
 }
